@@ -18,11 +18,16 @@
 body {
   margin: 0;
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   font-family: Karla, sans-serif;
   background: var(--color-background);
   color: var(--color-text);
+  font-size: 16px;
+
+  height: 500px;
+  width: 600px;
 }
 
 nav {
