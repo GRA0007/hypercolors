@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hyper Colors</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+    <nav>
+      <label>
+        Search:
+        <input id="search" type="search" autocomplete="off" autofocus>
+      </label>
+      <label>
+        Display:
+        <select id="display">
+          <option value="">Tiles</option>
+          <option value="list">List</option>
+          <option value="square">Squares</option>
+          <option value="bars">Horizontal</option>
+        </select>
+      </label>
+      <label>
+        Sort:
+        <select id="sort">
+          <option value="none">None</option>
+          <option value="luminance">Luminance</option>
+          <option value="hue">Hue</option>
+          <option value="saturation">Saturation</option>
+        </select>
+      </label>
+    </nav>
+
+    <main></main>
+
+    <script src="tinycolor.min.js"></script>
+    <script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+@font-face {
+	font-family: Karla;
+	src: url('karla-variable.ttf') format('truetype');
+	font-weight: 1 999;
+}
+
+:root {
+  --color-background: white;
+  --color-text: black;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: black;
+    --color-text: snow;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Karla, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+select, input {
+  border: 1px solid var(--color-text);
+  background: var(--color-background);
+  color: inherit;
+  font: inherit;
+  font-size: .9em;
+  padding: .1em .2em;
+  transition: box-shadow .15s;
+}
+select:focus, input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 1px var(--color-text);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  font-size: .8em;
+}
+main.list {
+  display: block;
+}
+main.square {
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 50px);
+  font-size: .6em;
+}
+main.square .name {
+  display: none;
+  font-size: .6em;
+}
+main.square .color:hover .name {
+  display: block;
+}
+main.bars {
+  display: flex;
+}
+main.bars .color {
+  flex: 1;
+  position: relative;
+  height: 100px;
+}
+main.bars span {
+  display: none;
+}
+main.bars .color:hover span {
+  display: block;
+  position: absolute;
+  top: calc(100% + 1em);
+  color: var(--color-text) !important;
+}
+main.bars .color:hover .hex {
+  top: calc(100% + 2.3em);
+}
+
+.color {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.color.hidden {
+  display: none;
+}
+.color .name {
+  font-weight: 600;
+}
