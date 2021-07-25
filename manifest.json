@@ -1,7 +1,7 @@
 {
   "name": "Hyper Colors",
   "description": "A searchable list of HTML named colors",
-  "version": "1.0",
+  "version": "1.2",
   "manifest_version": 2,
 
   "author": "Ben Grant",
